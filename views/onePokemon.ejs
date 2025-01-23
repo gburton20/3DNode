@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pokemon.Name %> - NPC</title>
+</head>
+<body>
+    <h1>Noble Pokemon Central</h1>
+    <a href="/pokemon">Back to the list.</a>
+    <br>
+    <a href="/pokemon/update-pokemon/<%= pokemon.PokedexNo %>">Edit this Pokémon</a>
+    <h3>Name: <%= pokemon.Name %></h3>
+    <p>PokedexNo: <%= pokemon.PokedexNo %></p>
+    <p>Type: <%= pokemon.Type %></p>
+    <ul>
+        <% for (const move of pokemon.Moves) { %>
+            <li><%= move %></li>
+        <% } %>
+    </ul>
+
+    <p>List of trainers who have this Pokemon:</p>
+    <% for (const trainer of trainers) { %>
+        <li><%= trainer.Name %>/li>
+    <% } %>
+    <a href="/pokemon/delete/<%= pokemon.PokedexNo %>">Delete this Pokémon?</a>
+</body>
+</html>

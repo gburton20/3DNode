@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Pokemon - NPC</title>
+</head>
+<body>
+    <h1>Noble Pokemon Central</h1>
+    <a href="pokemon/create-pokemon">Add your pokemon to the list!</a>
+    <ul>
+        <% for (const pokemon of pokemonArray) { %>
+        <li>
+            <a href="/pokemon/<%= pokemon.PokedexNo %>">
+            <%= pokemon.Name %>
+            </a>
+        </li>        
+        <% } %>
+    </ul>
+</body>
+</html>

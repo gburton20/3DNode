@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= trainer.Name %> - NPC</title>
+</head>
+<body>
+    <h1><%= trainer.Name %></h1>
+    <h3>Region: <%= trainer.Region %></h3>
+    <!-- I want to loop through all the Pokemon the trainer has: -->
+    <% if (pokemon.length > 0) { %>
+        <h3>Pokémon this trainer has:</h3>
+    <% } %>
+    <ul>
+        <% for (const mon of pokemon) { %>
+            <li><%= mon.Name %></li>
+        <% } %>
+    </ul>
+
+    <a href="/trainers">Back to the trainer list.</a>
+</body>
+</html>
