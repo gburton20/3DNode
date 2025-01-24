@@ -16,4 +16,6 @@ const companyWUISchema = new mongoose.Schema({
     }
 });
 
-const WUIData = mongoose.model('Company Listing', companyWUISchema);
+const WUIData = mongoose.model('Company', companyWUISchema);
+
+module.exports = WUIData;

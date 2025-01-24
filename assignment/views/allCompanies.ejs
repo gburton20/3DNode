@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Companies - WUI</title>
+</head>
+<body>
+    <h1>The Full List of Water Use Intensity (WUI) Data for the World's 10 Largest Companies in 2024:</h1>
+    <ul>
+        <% for (const company of companiesArray) { %>
+        <li>
+            <a href="/allcompanies/<% company._id.$oid %>">
+            <%= company.companyName %>
+            </a>
+        </li>
+        <% } %>
+    </ul>
+</body>
+</html>
