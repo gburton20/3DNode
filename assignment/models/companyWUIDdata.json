@@ -2,101 +2,101 @@
     {
     "companyName": "Apple",
     "totalWUI": 45.8,
-    "waterEfficiencyPlan": true
+    "hasWaterEfficiencyPlan": true
     },
     {
     "companyName": "Microsoft",
     "totalWUI": 32.4,
-    "waterEfficiencyPlan": true
+    "hasWaterEfficiencyPlan": true
     },
     {
     "companyName": "Amazon",
     "totalWUI": 58.2,
-    "waterEfficiencyPlan": true
+    "hasWaterEfficiencyPlan": true
     },
     {
     "companyName": "Alphabet (Google)",
     "totalWUI": 29.7,
-    "waterEfficiencyPlan": true
+    "hasWaterEfficiencyPlan": true
     },
     {
     "companyName": "Saudi Aramco",
     "totalWUI": 110.3,
-    "waterEfficiencyPlan": false
+    "hasWaterEfficiencyPlan": false
     },
     {
     "companyName": "Tesla",
     "totalWUI": 24.1,
-    "waterEfficiencyPlan": true
+    "hasWaterEfficiencyPlan": true
     },
     {
     "companyName": "Berkshire Hathaway",
     "totalWUI": 65.0,
-    "waterEfficiencyPlan": true
+    "hasWaterEfficiencyPlan": true
     },
     {
     "companyName": "NVIDIA",
     "totalWUI": 17.8,
-    "waterEfficiencyPlan": true
+    "hasWaterEfficiencyPlan": true
     },
     {
     "companyName": "Meta (Facebook)",
     "totalWUI": 26.4,
-    "waterEfficiencyPlan": true
+    "hasWaterEfficiencyPlan": true
     },
     {
     "companyName": "ExxonMobil",
     "totalWUI": 120.7,
-    "waterEfficiencyPlan": false
+    "hasWaterEfficiencyPlan": false
     },
     {
     "companyName": "Samsung Electronics",
     "totalWUI": 55.6,
-    "waterEfficiencyPlan": true
+    "hasWaterEfficiencyPlan": true
     },
     {
     "companyName": "Johnson & Johnson",
     "totalWUI": 34.2,
-    "waterEfficiencyPlan": true
+    "hasWaterEfficiencyPlan": true
     },
     {
     "companyName": "Toyota Motor",
     "totalWUI": 48.5,
-    "waterEfficiencyPlan": true
+    "hasWaterEfficiencyPlan": true
     },
     {
     "companyName": "Procter & Gamble",
     "totalWUI": 27.9,
-    "waterEfficiencyPlan": true
+    "hasWaterEfficiencyPlan": true
     },
     {
     "companyName": "Shell",
     "totalWUI": 98.2,
-    "waterEfficiencyPlan": false
+    "hasWaterEfficiencyPlan": false
     },
     {
     "companyName": "Visa",
     "totalWUI": 12.3,
-    "waterEfficiencyPlan": true
+    "hasWaterEfficiencyPlan": true
     },
     {
     "companyName": "Coca-Cola",
     "totalWUI": 70.5,
-    "waterEfficiencyPlan": true
+    "hasWaterEfficiencyPlan": true
     },
     {
     "companyName": "Pfizer",
     "totalWUI": 36.1,
-    "waterEfficiencyPlan": true
+    "hasWaterEfficiencyPlan": true
     },
     {
     "companyName": "Intel",
     "totalWUI": 41.7,
-    "waterEfficiencyPlan": true
+    "hasWaterEfficiencyPlan": true
     },
     {
     "companyName": "Chevron",
     "totalWUI": 105.3,
-    "waterEfficiencyPlan": false
+    "hasWaterEfficiencyPlan": false
     }
 ]

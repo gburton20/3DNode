@@ -1,13 +1,37 @@
 const WUIData = require('../../models/companyWUIData');
-// Function which returns the entire WUIData collection:
-const getAllWUIData = async () => {
+// Function which RETURNS ALL companies in the DB:
+const getAllCompanies = async () => {
     try {
-        const company = await WUIData.find({});
+        const companies = await WUIData.find({});
+
+        return companies;
+    } catch (error) {
+        throw error;
+    }
+};
+// Function which RETURNS ONE company and its associated WUI data
+const getOneCompany = async (companyName) => {
+    try {
+        const company = await WUIData.findOne({companyName: companyName});
 
         return company;
     } catch (error) {
         throw error;
     }
 };
+// Function which CREATES ONE company in the DB
+const createCompany = async (newCompanyFormData) => {
+    try {
+        const company = await WUIData.create(newCompanyFormData);
 
-module.exports = getAllWUIData;
+        return company;
+    } catch (error) {
+        throw error;
+    }
+}
+
+module.exports = {
+    getAllCompanies, 
+    getOneCompany,
+    createCompany,
+};

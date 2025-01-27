@@ -18,8 +18,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 // Import the viewsRouter.js file and assign the home URL, '/', as its event listener
+// Serving HTML/EJS to the client:
 app.use('/', viewsRouter);
-app.use('/api/v1/allcompanies', companyRouter);
+// Serving JSON to the client:
+app.use('/companies', companyRouter);
 
 const PORT = 3000;
 app.listen(PORT, () => {

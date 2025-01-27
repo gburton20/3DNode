@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= companyName.companyName %>'s WUI Data for 2024</title>
+</head>
+
+<body>
+    <h1><%= companyName.companyName %>'s Corporate WUI Database (CWD) Entry for 2024</h1>
+    <a href="/companies">Click here to return to the list of all companies</a>
+
+    <h3>Company: <%= companyName.companyName %></h3>
+    <h3>Total water use intensity (WUI), in liters per square meter per year (L/m^2/year): <%= companyName.totalWUI %></h3>
+    <h3>Does this company have a water efficiency plan (WEP) in place?: <%= companyName.hasWaterEfficiencyPlan ? 'Yes' : 'No' %></h3>
+</body>
+</html>

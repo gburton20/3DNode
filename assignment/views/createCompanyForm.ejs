@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Company in the Company WUI Database</title>
+</head>
+<body>
+    <h1>Complete this form to add a company to the database!</h1>
+    <br>
+
+    <a href="/companies">Click here to return to the list of all companies</a>
+    <br><br>
+
+    <form action="/companies/createCompany" method="post">
+        
+        <label for="companyName">Company name:</label>
+        <input type="text" name="companyName" id="companyName" placeholder="Please give the company's full registered name">
+        <br><br>
+
+        <label for="totalWUI">Total water use intensity (WUI), in liters per square meter per year (L/m^2/year):</label>
+        <input type="number" name="totalWUI" id="totalWUI" placeholder="In liters per square meter per year (L/m^2/year)">
+        <br><br>
+
+        <label for="hasWaterEfficiencyPlan">Does this company have a water efficiency plan (WEP) in place?:</label>
+        <input type="checkbox" name="hasWaterEfficiencyPlan" id="hasWaterEfficiencyPlan" value="true" checked>
+        <input type="checkbox" name="hasntWaterEfficiencyPlan" id="hasntWaterEfficiencyPlan" value="false">
+        <br><br>
+
+        <button>Create company</button>
+
+    </form>
+</body>
+</html>

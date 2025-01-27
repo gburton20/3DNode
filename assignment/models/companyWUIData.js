@@ -10,7 +10,7 @@ const companyWUISchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
-    isWaterEfficiencyPlan: {
+    hasWaterEfficiencyPlan: {
         type: Boolean,
         required: true,
     }
