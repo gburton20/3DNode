@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update <%= companyName.companyName %></title>
+</head>
+<body>
+    <h1>CURRENTLY EDITING <%= companyName.companyName %></h1>
+    <br>
+    <a href="/companies/<%=companyName.companyName%>">Back to <%= companyName.companyName%></a>
+
+    <br><br>
+
+    <form action="/companies/update-company/<%= companyName.companyName%>?_method=PATCH" method ="post">
+
+        <label for="companyName">Company name:</label>
+        <br>
+        <input type="text" name="companyName" id="companyName" placeholder="<%= companyName.companyName %>" value="<%= companyName.companyName %>">
+
+        <br><br>
+
+        <label for="totalWUI">Total water use intensity (WUI), in liters per square meter per year (L/m^2/year):</label>
+        <br>
+        <input type="number" name="totalWUI" id="totalWUI" placeholder="<%= companyName.totalWUI %>" value="<%= companyName.totalWUI %>" >
+
+        <br><br>
+
+        <label for="hasWaterEfficiencyPlan">Does this company have a water efficiency plan (WEP) in place?:</label>
+        <br>
+        <input type="checkbox" name="hasWaterEfficiencyPlan" id="hasWaterEfficiencyPlan" placeholder= "<%= companyName.hasWaterEfficiencyPlan %>" value="<%= companyName.hasntWaterEfficiencyPlan %>" checked>
+        <label for="hasWaterEfficiencyPlan">Yes</label>
+        <input type="checkbox" name="hasntWaterEfficiencyPlan" id="hasntWaterEfficiencyPlan" placeholder= "<%= companyName.hasntWaterEfficiencyPlan %>" value="<%= companyName.hasntWaterEfficiencyPlan %>">
+        <label for="hasntWaterEfficiencyPlan">No</label>
+
+        <br><br>
+
+        <input type="submit" name="_method" value="Update this Company">
+    </form>
+</body>
+</html>

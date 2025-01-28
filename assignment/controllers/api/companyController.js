@@ -22,16 +22,30 @@ const getOneCompany = async (companyName) => {
 // Function which CREATES ONE company in the DB
 const createCompany = async (newCompanyFormData) => {
     try {
-        const company = await WUIData.create(newCompanyFormData);
+        const newCompany = await WUIData.create(newCompanyFormData);
 
-        return company;
+        return newCompany;
     } catch (error) {
         throw error;
     }
-}
+};
+// Function which UPDATES ONE company in the DB:
+const updateCompany = async (companyName, companyData) => {
+    try {
+        const updatedCompany = await WUIData.findOneAndUpdate(
+            {companyName: companyName}, 
+            companyData, 
+            {upsert: true},
+        );
 
+        return updatedCompany;
+    } catch (error) {
+        throw error;
+    }
+};
 module.exports = {
     getAllCompanies, 
     getOneCompany,
     createCompany,
+    updateCompany,
 };

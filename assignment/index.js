@@ -1,6 +1,6 @@
 const express = require('express');
 const logger = require('morgan');
-// const methodOverride = require('method-override');
+const methodOverride = require('method-override');
 
 const path = require('path');
 
@@ -17,6 +17,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Write middleware for setting the view engine to ESJ and the views to look at './views/':
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+app.use(methodOverride('_method'));
 // Import the viewsRouter.js file and assign the home URL, '/', as its event listener
 // Serving HTML/EJS to the client:
 app.use('/', viewsRouter);

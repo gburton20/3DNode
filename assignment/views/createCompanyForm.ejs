@@ -15,16 +15,21 @@
     <form action="/companies/createCompany" method="post">
         
         <label for="companyName">Company name:</label>
+        <br>
         <input type="text" name="companyName" id="companyName" placeholder="Please give the company's full registered name">
         <br><br>
 
         <label for="totalWUI">Total water use intensity (WUI), in liters per square meter per year (L/m^2/year):</label>
+        <br>
         <input type="number" name="totalWUI" id="totalWUI" placeholder="In liters per square meter per year (L/m^2/year)">
         <br><br>
 
         <label for="hasWaterEfficiencyPlan">Does this company have a water efficiency plan (WEP) in place?:</label>
+        <br>
         <input type="checkbox" name="hasWaterEfficiencyPlan" id="hasWaterEfficiencyPlan" value="true" checked>
+        <label for="hasWaterEfficiencyPlan">Yes</label>
         <input type="checkbox" name="hasntWaterEfficiencyPlan" id="hasntWaterEfficiencyPlan" value="false">
+        <label for="hasntWaterEfficiencyPlan">No</label>
         <br><br>
 
         <button>Create company</button>

@@ -6,6 +6,7 @@ const {
     getAllCompanies,
     getOneCompany,
     createCompany,
+    updateCompany,
 } = require('../../controllers/api/companyController');
 
 // Create a router variable:
@@ -43,7 +44,7 @@ router.get('/companies/:companyName', async (req, res) => {
 }); // End of the GET ONE company request
 
 
-// Write a router.post('/companies/createCompany') to respond with createCompany.ejs
+// Write a router.post('/companies/createCompany') to respond with createCompanyForm.ejs
 router.post('/companies/createCompany', async (req, res) => {
     try {
         await createCompany(req.body);
@@ -51,6 +52,26 @@ router.post('/companies/createCompany', async (req, res) => {
     } catch (error) {
         res.status(500).send('<h1>An error has occurred</h1><a href="/companies/create-company">Try again.</a>');
         console.log(error);
+    }
+}); // End of the POST ONE company method
+
+// Write a router.patch('/companies/updateCompany') to respond with updateCompanyForm.ejs
+// First, render the updateCompanyForm.ejs file
+router.get('/companies/update-company/:companyName', async (req, res) => {
+    try {
+        const updateCompanyForm = await getOneCompany(req.params.companyName);
+        res.render('updateCompanyForm', {companyName: updateCompanyForm});
+    } catch (error) {
+        res.send('<h1>Error updating this company</h1>');
+    }
+})
+// Second, patch the update into the DB
+router.patch('/companies/updateCompany/:companyName', async (req, res) => {
+    try {
+        const updatedCompany = await updateCompany(req.params.companyName, req.body);
+        res.redirect('/companies/' + updatedCompany.companyName);
+    } catch (error) {
+        res.send('<h1>Error updating this company</h1>')
     }
 });
 

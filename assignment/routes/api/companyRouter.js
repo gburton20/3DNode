@@ -6,6 +6,7 @@ const {
     getAllCompanies,
     getOneCompany,
     createCompany,
+    updateCompany,
 } = require('../../controllers/api/companyController');
 //Write a GET method extension to get all company data
 router.get('/', async (_, res) => {
@@ -44,14 +45,27 @@ router.get('/:companyName', async (req, res) => {
 // Write a POST request to create ONE company
 router.post('/', async (req, res) => {
     try {
-        const company = await createCompany(req.body);
+        const newCompany = await createCompany(req.body);
         res.status(200).json({
             message: 'Success',
-            payload: company,
+            payload: newCompany,
         })
     } catch (error) {
         return 'Failure,couldn\'t get data for this company';
     }
 }); // End of POST request to create ONE company
+
+// Write a PATCH request to update ONE company:
+router.patch('/:companyName', async (req, res) => {
+    try {
+        const updatedCompany = await updateCompany(req.params.companyName, req.body);
+        res.status(200).json({
+            message: 'Success',
+            payload: updatedCompany,
+        });
+    } catch (error) {
+        return 'Failure,couldn\'t update data for this company';
+    }
+}); // End of PATCH request to update ONE company
 
 module.exports = router;
