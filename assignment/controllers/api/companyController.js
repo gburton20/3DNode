@@ -43,6 +43,14 @@ const updateCompany = async (companyName, companyData) => {
         throw error;
     }
 };
+// Function which DELETES ONE company is the DB:
+const deleteCompany = async (companyName) => {
+    try {
+        
+    } catch (error) {
+        
+    }
+}
 module.exports = {
     getAllCompanies, 
     getOneCompany,

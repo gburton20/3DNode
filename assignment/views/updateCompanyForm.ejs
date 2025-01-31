@@ -28,9 +28,9 @@
 
         <label for="hasWaterEfficiencyPlan">Does this company have a water efficiency plan (WEP) in place?:</label>
         <br>
-        <input type="checkbox" name="hasWaterEfficiencyPlan" id="hasWaterEfficiencyPlan" placeholder= "<%= companyName.hasWaterEfficiencyPlan %>" value="<%= companyName.hasntWaterEfficiencyPlan %>" checked>
+        <input type="checkbox" name="hasWaterEfficiencyPlan" id="hasWaterEfficiencyPlan" value="<%= companyName.hasWaterEfficiencyPlan %>" checked>
         <label for="hasWaterEfficiencyPlan">Yes</label>
-        <input type="checkbox" name="hasntWaterEfficiencyPlan" id="hasntWaterEfficiencyPlan" placeholder= "<%= companyName.hasntWaterEfficiencyPlan %>" value="<%= companyName.hasntWaterEfficiencyPlan %>">
+        <input type="checkbox" name="hasntWaterEfficiencyPlan" id="hasntWaterEfficiencyPlan" value="<%= !companyName.hasWaterEfficiencyPlan %>">
         <label for="hasntWaterEfficiencyPlan">No</label>
 
         <br><br>

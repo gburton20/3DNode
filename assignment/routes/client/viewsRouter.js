@@ -66,12 +66,13 @@ router.get('/companies/update-company/:companyName', async (req, res) => {
     }
 })
 // Second, patch the update into the DB
-router.patch('/companies/updateCompany/:companyName', async (req, res) => {
+router.patch('/companies/update-company/:companyName', async (req, res) => {
     try {
         const updatedCompany = await updateCompany(req.params.companyName, req.body);
         res.redirect('/companies/' + updatedCompany.companyName);
     } catch (error) {
         res.send('<h1>Error updating this company</h1>')
+        console.log(error);
     }
 });
 
